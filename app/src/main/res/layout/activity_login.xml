@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main_layout"
+    tools:context="com.dev.sachin.sachinkumardemo.Activities.LoginActivity">
+
+    <ImageView
+        android:src="@mipmap/git_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="30dp"
+        android:layout_marginBottom="30dp"/>
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:text="sachinkhalu123"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:hint="Enter Username"
+        android:textSize="20sp" />
+
+    <EditText
+        android:text="abc123654"
+        android:inputType="textPassword"
+        android:id="@+id/et_password"
+        android:hint="Enter password"
+        android:textSize="20sp"
+        android:layout_margin="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_margin="15dp"
+        android:text="Login to Github"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
