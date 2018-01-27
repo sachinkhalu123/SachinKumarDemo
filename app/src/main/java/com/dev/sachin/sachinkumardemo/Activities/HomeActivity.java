@@ -1,6 +1,8 @@
 package com.dev.sachin.sachinkumardemo.Activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -21,6 +23,7 @@ import com.dev.sachin.sachinkumardemo.R;
 import com.dev.sachin.sachinkumardemo.fragments.HomeFragment;
 import com.dev.sachin.sachinkumardemo.fragments.ProfileFragment;
 
+import static com.dev.sachin.sachinkumardemo.Activities.LoginActivity.PREF_FILE_NAME;
 
 
 public class HomeActivity extends AppCompatActivity implements
@@ -28,6 +31,8 @@ public class HomeActivity extends AppCompatActivity implements
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
+    public static final String PREF_CHECK_FILE_NAME= "loginCheck";
+    SharedPreferences checkPrefs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +45,12 @@ public class HomeActivity extends AppCompatActivity implements
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
+        checkPrefs = getSharedPreferences(PREF_CHECK_FILE_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor prefsEditor = checkPrefs.edit();
+        prefsEditor.putBoolean("loggedin", true);
+        prefsEditor.commit();
+
+
 
         View hView =  navigationView.getHeaderView(0);
         TextView nav_user = (TextView)hView.findViewById(R.id.nav_header_name);
@@ -90,6 +101,10 @@ public class HomeActivity extends AppCompatActivity implements
 
             case R.id.nav_logout:
                 startActivity(new Intent(HomeActivity.this,LoginActivity.class));
+                SharedPreferences settings = getSharedPreferences(PREF_CHECK_FILE_NAME, Context.MODE_PRIVATE);
+                SharedPreferences settings2 = getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
+                settings.edit().clear().apply();
+                settings2.edit().clear().apply();
                 finish();
         }
     }
