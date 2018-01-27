@@ -2,79 +2,191 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.dev.sachin.sachinkumardemo.fragments.ProfileFragment">
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:gravity="center"
-        android:layout_margin="20dp"
-        android:textStyle="bold"
-        android:text="Github Profile" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="#00BFFF">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Github Profile:"
+                    android:textColor="#fff"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <view
+                android:layout_width="1dp"
+                android:layout_height="5dp"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#e4e4e4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/profileFrag_login"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:text="Hello in my profile"
+                    android:textColor="#00BFFF"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+            <view
+                android:layout_width="1dp"
+                android:layout_height="5dp"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#e4e4e4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/profileFrag_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:text="Hello in my profile"
+                    android:textColor="#00BFFF"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+            <view
+                android:layout_width="1dp"
+                android:layout_height="5dp"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#e4e4e4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/profileFrag_htmlurl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="5"
+                    android:gravity="center"
+
+                    android:text="Hello in my profile"
+
+                    android:textColor="#00BFFF"
+                    android:textSize="20sp" />
 
 
-    <TextView
-        android:id="@+id/profileFrag_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_margin="20dp"
-        android:text="Hello in my profile" />
+            </LinearLayout>
+            <view
+                android:layout_width="1dp"
+                android:layout_height="5dp"
+                android:background="#fff"/>
 
-    <TextView
-        android:id="@+id/profileFrag_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_margin="20dp"
-        android:text="Hello in my profile" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#e4e4e4"
+                android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/profileFrag_htmlurl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_margin="20dp"
-        android:text="Hello in my profile" />
+                <TextView
+                    android:id="@+id/profileFrag_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:text="Hello in my profile"
 
-    <TextView
-    android:id="@+id/profileFrag_location"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textSize="20sp"
-    android:gravity="center"
-    android:layout_margin="20dp"
-    android:text="Hello in my profile" />
-    <TextView
-        android:id="@+id/profileFrag_publicrepo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_margin="20dp"
-        android:text="Hello in my profile" />
-    <TextView
-        android:id="@+id/profileFrag_followers"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_margin="20dp"
-        android:text="Hello in my profile" />
-    <TextView
-        android:id="@+id/profileFrag_following"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_margin="20dp"
-        android:text="Hello in my profile" />
+                    android:textColor="#00BFFF"
 
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+            <view
+                android:layout_width="1dp"
+                android:layout_height="5dp"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#e4e4e4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/profileFrag_publicrepo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="5"
+
+                    android:gravity="center"
+                    android:text="Hello in my profile"
+
+                    android:textColor="#00BFFF"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+            <view
+                android:layout_width="1dp"
+                android:layout_height="5dp"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#e4e4e4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/profileFrag_followers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:text="Hello in my profile"
+
+                    android:textColor="#00BFFF"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
