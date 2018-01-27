@@ -19,14 +19,12 @@
     <EditText
         android:id="@+id/et_username"
         android:layout_width="match_parent"
-        android:text="sachinkhalu123"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:hint="Enter Username"
         android:textSize="20sp" />
 
     <EditText
-        android:text="abc123654"
         android:inputType="textPassword"
         android:id="@+id/et_password"
         android:hint="Enter password"
