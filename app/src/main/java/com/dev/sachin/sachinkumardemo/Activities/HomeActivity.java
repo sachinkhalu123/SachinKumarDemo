@@ -56,7 +56,11 @@ public class HomeActivity extends AppCompatActivity implements
         TextView nav_user = (TextView)hView.findViewById(R.id.nav_header_name);
         ImageView nav_img = (ImageView) hView.findViewById(R.id.nav_header_imgview);
         nav_user.setText(UserDetailsPrefs.getuserDetails(this).getLogin());
-        Glide.with(this).load(UserDetailsPrefs.getuserDetails(this).getAvatarImg()).into(nav_img);
+        try {
+            Glide.with(this).load(UserDetailsPrefs.getuserDetails(this).getAvatarImg()).into(nav_img);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         FragmentTransaction ftHome = getSupportFragmentManager().beginTransaction();
         ftHome.add(R.id.container, new HomeFragment());
         ftHome.commit();
